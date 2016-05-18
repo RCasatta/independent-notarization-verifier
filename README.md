@@ -1,1 +1,1 @@
-# independent-notarization-verifier
+# indipendent-notarization-verifier
