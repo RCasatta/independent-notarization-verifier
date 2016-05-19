@@ -1,5 +1,5 @@
 /*
-CryptoJS v3.1.2
+CryptoJS_ v3.1.2
 code.google.com/p/crypto-js
 (c) 2009-2013 by Jeff Mott. All rights reserved.
 code.google.com/p/crypto-js/wiki/License
@@ -8,7 +8,7 @@ Modifications for asynchronous callbacks on progress by maraoz
 (c) 2013 by Manuel Araoz.
 https://twitter.com/maraoz
 */
-var CryptoJS = CryptoJS || function (h, s) {
+var CryptoJS_ = CryptoJS_ || function (h, s) {
         var f = {}, t = f.lib = {}, g = function () {}, j = t.Base = {
                 extend: function (a) {
                     g.prototype = this;
@@ -209,7 +209,7 @@ var CryptoJS = CryptoJS || function (h, s) {
         return f
     }(Math);
 (function (h) {
-    for (var s = CryptoJS, f = s.lib, t = f.WordArray, g = f.Hasher, f = s.algo, j = [], q = [], v = function (a) {
+    for (var s = CryptoJS_, f = s.lib, t = f.WordArray, g = f.Hasher, f = s.algo, j = [], q = [], v = function (a) {
             return 4294967296 * (a - (a | 0)) | 0
         }, u = 2, k = 0; 64 > k;) {
         var l;
