@@ -43,7 +43,6 @@ holder.ondragover = function () { this.className = 'hover'; return false; };
 holder.ondragend = function () { this.className = ''; return false; };
 holder.ondrop = function (e) {
   this.className = '';
-  alert('warning','Document received, starting to hash...');
   e.preventDefault();
   var file = e.dataTransfer.files[0];
   handleFileSelect(file);
@@ -143,10 +142,10 @@ function verify(hash, stamp) {
     siblingsMatch.innerText = "Merkle root derived from hash and siblings DOES NOT MATCH the one in the stamp";
     siblingsMatchCheck=false;
   }
-  
+
   //CryptoJS.SHA256();
 
-  
+
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
@@ -162,10 +161,10 @@ function verify(hash, stamp) {
           timeMatch.innerText = "Timestamp from the block " + new Date(data.blocktime*1000) + " DOES NOT MATCH the one in the stamp " + new Date(stamp.timestamp*1000);
           timeMatchCheck=false;
         }
-        
+
         var rootMatchCheck=false;
         var rootMatch=document.getElementById('rootMatch');
-        
+
         for(var i=0;i<data.vout.length;i++) {
           var current = data.vout[i];
           var hex = current.scriptPubKey.hex ;
