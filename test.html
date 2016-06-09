@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Independent notarization verifier</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <h1>Independent notarization verifier</h1>
+    
+    <input id="myInput" type="file" style="visibility:hidden">
+    <div id="holder">
+        <div class="text-center inner-div">
+            <h4><span id="filename">1. Drop here a document</span></h4>
+            <h4><span id="filesize">Or click to select one</span></h4>
+        </div>
+
+    </div>
+    <p id="status" class="wrap" style="margin-bottom: 0px"></p>
+    <br>
+
+    <div class="textarea">
+    <h4>2. Paste here stamp data (json)</h4>
+    <div>
+    <textarea rows="4" cols="45" id="jsonstamp">{"timestamp":1463214718,"status":"ok","txHash":"58d560400c7eb74ac2a3800951ae31713c3d190140216a2f2b6bcde8093f936a","merkle":{"index":4,"root":"7ce2fa0d4fbd1fcb74d247dd389d2ec188b05810c8eb2a37b215ffd9f7b2fc00","hash":"4b4973ac756f681600f8d6bd4d944a98317c3a46be67c4ecc9d900b1b73ba0c9","siblings":["69e2d5e223612ffc3d88cac7c42c57341a65c16b23416ff4fba434ca0343bfea","d63c2d6258b674ae727a382648e6c0830a58b031415603cfdfb708662f8ff547","25b449aa3d340b497d1e53d69056e8231a6f5a79f9243333510acd3809621cae","b3b32579cf2947941fbeff52dcc6af033ba1ea060d7ded8f1853d06929f61e1a"]}}</textarea>
+    </div>
+    </div>
+    
+    <br>
+    <br>
+
+    <input type="submit" value="Verify" class="button" id="verifyButton">
+    
+    <p id="stampAndDocumentMatch" class="wrap"></p>
+    <p id="timeMatch" class="wrap"></p>
+    <p id="rootMatch" class="wrap"></p>
+    <p id="siblingsMatch" class="wrap"></p>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/cipher-core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/format-hex.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/sha256.js"></script>
+
+
+  </body>
+</html>
